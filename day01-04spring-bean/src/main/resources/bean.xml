@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--spring对bean的管理细节-->
+    <!--
+        1.创建bean的三种方式
+        2.bean的作用范围
+        3.bean对象的生命周期
+    -->
+    <!--
+        方式一：使用默认构造函数创建
+        在spring的配置文件中使用bean标签，配以id和class，而且没有其它属性时和标签时
+        采用的时默认的构造函数创建bean对象，如果类中没有默认构造函数，则无法被创建
+    -->
+<!--    <bean id="accountService" class="com.learn.service.impl.AccountServiceImpl"/>-->
+
+    <!--
+        方式二：使用工厂类中的方法创建对象（使用某个类中的方法创建对象，并存入spring容器）
+        1.先指定工厂类名称，找到其全类名
+        2.factory-bean 对应创建对象的工厂类id
+        3.factory-method 对应创建对象的方法
+    -->
+    <!--<bean id="instanceFactory" class="com.learn.factory.InstanceFactory"/>
+    <bean id="accountService" factory-bean="instanceFactory" factory-method="getAccountService"/>-->
+
+    <!--
+        方式三：使用静态方法创建对象
+        factory-method 由于是静态方法，因此可以直接调用该方法创建对象
+    -->
+    <!--<bean id="accountService" class="com.learn.factory.StaticFactory" factory-method="getAccountService"/>-->
+
+    <!--bean的作用范围
+        bean的 scope 属性定义作用范围
+            singleton 单例模式【饿汉模式】（默认值），对象调用只会被创建一次
+            prototype   多例【懒汉模式】，在对象需要被使用时才会被创建
+            request     作用于web应用的请求范围
+            session     作用于web应用的会话范围
+            global-session      作用于集群环境的会话范围（全局会话）
+    -->
+    <!--<bean id="accountService" class="com.learn.service.impl.AccountServiceImpl" scope="prototype"/>-->
+
+    <!--
+        bean的生命周期
+    -->
+    <bean id="accountService" class="com.learn.service.impl.AccountServiceImpl"
+            scope="prototype"
+            destroy-method="destroy"
+            init-method="init"/>
+</beans>

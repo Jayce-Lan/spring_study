@@ -200,6 +200,75 @@ public class UserServiceImpl implements UserService {
 
 ### 使用无参构造方法创建对象（默认）
 
+#### 创建实体类对象的三种方式
+
+```xml
+<!--spring对bean的管理细节-->
+<!--
+        1.创建bean的三种方式
+        2.bean的作用范围
+        3.bean对象的生命周期
+    -->
+<!--
+        方式一：使用默认构造函数创建
+        在spring的配置文件中使用bean标签，配以id和class，而且没有其它属性时和标签时
+        采用的时默认的构造函数创建bean对象，如果类中没有默认构造函数，则无法被创建
+    -->
+<bean id="accountService" class="com.learn.service.impl.AccountServiceImpl"/>
+
+<!--
+        方式二：使用工厂类中的方法创建对象（使用某个类中的方法创建对象，并存入spring容器）
+        1.先指定工厂类名称，找到其全类名
+        2.factory-bean 对应创建对象的工厂类id
+        3.factory-method 对应创建对象的方法
+    -->
+<bean id="instanceFactory" class="com.learn.factory.InstanceFactory"/>
+<bean id="accountService" factory-bean="instanceFactory" factory-method="getAccountService"/>
+
+<!--
+        方式三：使用静态方法创建对象
+        factory-method 由于是静态方法，因此可以直接调用该方法创建对象
+    -->
+<bean id="accountService" class="com.learn.factory.StaticFactory" factory-method="getAccountService"/>
+```
+
+
+
+#### bean的作用范围（scope）
+
+```xml
+<!--bean的作用范围
+        bean的 scope 属性定义作用范围
+            singleton 单例模式【饿汉模式】（默认值），对象调用只会被创建一次
+            prototype   多例【懒汉模式】，在对象需要被使用时才会被创建
+            request     作用于web应用的请求范围
+            session     作用于web应用的会话范围
+            global-session      作用于集群环境的会话范围（全局会话）
+    -->
+<bean id="accountService" class="com.learn.service.impl.AccountServiceImpl" scope="prototype"/>
+```
+
+
+
+#### bean对象的生命周期
+
+> 单例对象
+
+- 当容器创建时，对象出生
+- 容器销毁，对象销毁
+- 单例对象生命周期与容器相同
+
+
+
+> 多例对象
+
+- 当使用对象时，容器创建对象
+- 对象只要在使用过程就一直存在
+- 容器销毁之后对象并不会跟着销毁
+- 当对象长时间不被使用时，由Java的垃圾回收机制回收
+
+
+
 ### 使用有参构造方法创建对象
 
 #### 下标赋值
