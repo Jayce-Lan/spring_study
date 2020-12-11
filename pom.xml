@@ -12,6 +12,7 @@
         <module>day01-02-factory</module>
         <module>day01-03spring-bean</module>
         <module>day01-04spring-bean</module>
+        <module>day01-05spring-DI</module>
     </modules>
     <packaging>pom</packaging>
 

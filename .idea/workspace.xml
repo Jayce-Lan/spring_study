@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e23b96-ee2e-48fe-a433-9fe67260ac94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/day01-04spring-bean.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/src/main/java/com/learn/factory/InstanceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/src/main/java/com/learn/factory/StaticFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/src/main/java/com/learn/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/src/main/java/com/learn/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/src/main/java/com/learn/ui/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day01-04spring-bean/src/main/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day01-05spring-DI/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day01-05spring-DI/src/main/java/com/learn/Service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day01-05spring-DI/src/main/java/com/learn/Service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day01-05spring-DI/src/main/java/com/learn/Service/impl/AccountServiceImpl2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day01-05spring-DI/src/main/resources/bean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day01-05spring-DI/src/test/java/MyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -80,36 +78,10 @@
       <recent name="D:\JavaProject\spring_study\day01-01-jdbc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client (2)">
-    <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.ui.Client" />
-      <module name="day01-03spring-bean" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MyTest.TestDI2">
     <configuration name="Client (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.learn.ui.Client" />
       <module name="day01-04spring-bean" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.ui.Client" />
-      <module name="day01-02-factory" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.learn.ui.*" />
@@ -133,26 +105,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JDBCDemo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.learn.jdbc.JDBCDemo1" />
-      <module name="day01-01-jdbc" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.learn.jdbc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="MyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day01-05spring-DI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest.TestDI1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day01-05spring-DI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="TestDI1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest.TestDI2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day01-05spring-DI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="TestDI2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyTest.TestDI2" />
+        <item itemvalue="JUnit.MyTest" />
+        <item itemvalue="JUnit.MyTest.TestDI1" />
         <item itemvalue="Application.Client (2)" />
         <item itemvalue="Application.Client2" />
-        <item itemvalue="Application.Client (1)" />
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.JDBCDemo1" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +156,7 @@
       <updated>1607650338479</updated>
       <workItem from="1607650341972" duration="5058000" />
       <workItem from="1607655435977" duration="4251000" />
-      <workItem from="1607670978027" duration="3974000" />
+      <workItem from="1607670978027" duration="6735000" />
     </task>
     <servers />
   </component>
@@ -183,10 +171,10 @@
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="233" y="0" key="#Project_Structure/0.0.1280.679@0.0.1280.679" timestamp="1607671117047" />
-    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser" timestamp="1607659317254">
+    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser" timestamp="1607677095853">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser/0.0.1280.679@0.0.1280.679" timestamp="1607659317254" />
+    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser/0.0.1280.679@0.0.1280.679" timestamp="1607677095853" />
     <state x="282" y="264" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1607671135401">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
@@ -203,38 +191,38 @@
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="421" y="94" key="FileChooserDialogImpl/0.0.1280.679@0.0.1280.679" timestamp="1607651635309" />
-    <state width="1237" height="210" key="GridCell.Tab.0.bottom" timestamp="1607674764824">
+    <state width="1237" height="287" key="GridCell.Tab.0.bottom" timestamp="1607677788345">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.0.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607674764824" />
-    <state width="1237" height="210" key="GridCell.Tab.0.center" timestamp="1607674764824">
+    <state width="1237" height="287" key="GridCell.Tab.0.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607677788345" />
+    <state width="1237" height="287" key="GridCell.Tab.0.center" timestamp="1607677788345">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.0.center/0.0.1280.679@0.0.1280.679" timestamp="1607674764824" />
-    <state width="1237" height="210" key="GridCell.Tab.0.left" timestamp="1607674764824">
+    <state width="1237" height="287" key="GridCell.Tab.0.center/0.0.1280.679@0.0.1280.679" timestamp="1607677788345" />
+    <state width="1237" height="287" key="GridCell.Tab.0.left" timestamp="1607677788344">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.0.left/0.0.1280.679@0.0.1280.679" timestamp="1607674764824" />
-    <state width="1237" height="210" key="GridCell.Tab.0.right" timestamp="1607674764824">
+    <state width="1237" height="287" key="GridCell.Tab.0.left/0.0.1280.679@0.0.1280.679" timestamp="1607677788344" />
+    <state width="1237" height="287" key="GridCell.Tab.0.right" timestamp="1607677788345">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.0.right/0.0.1280.679@0.0.1280.679" timestamp="1607674764824" />
-    <state width="1237" height="210" key="GridCell.Tab.1.bottom" timestamp="1607674764689">
+    <state width="1237" height="287" key="GridCell.Tab.0.right/0.0.1280.679@0.0.1280.679" timestamp="1607677788345" />
+    <state width="1237" height="287" key="GridCell.Tab.1.bottom" timestamp="1607677788345">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.1.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607674764689" />
-    <state width="1237" height="210" key="GridCell.Tab.1.center" timestamp="1607674764689">
+    <state width="1237" height="287" key="GridCell.Tab.1.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607677788345" />
+    <state width="1237" height="287" key="GridCell.Tab.1.center" timestamp="1607677788345">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.1.center/0.0.1280.679@0.0.1280.679" timestamp="1607674764689" />
-    <state width="1237" height="210" key="GridCell.Tab.1.left" timestamp="1607674764689">
+    <state width="1237" height="287" key="GridCell.Tab.1.center/0.0.1280.679@0.0.1280.679" timestamp="1607677788345" />
+    <state width="1237" height="287" key="GridCell.Tab.1.left" timestamp="1607677788345">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.1.left/0.0.1280.679@0.0.1280.679" timestamp="1607674764689" />
-    <state width="1237" height="210" key="GridCell.Tab.1.right" timestamp="1607674764689">
+    <state width="1237" height="287" key="GridCell.Tab.1.left/0.0.1280.679@0.0.1280.679" timestamp="1607677788345" />
+    <state width="1237" height="287" key="GridCell.Tab.1.right" timestamp="1607677788345">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="210" key="GridCell.Tab.1.right/0.0.1280.679@0.0.1280.679" timestamp="1607674764689" />
+    <state width="1237" height="287" key="GridCell.Tab.1.right/0.0.1280.679@0.0.1280.679" timestamp="1607677788345" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1607651264020">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
@@ -247,18 +235,18 @@
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="325" y="163" key="com.intellij.ide.util.TipDialog/0.0.1280.679@0.0.1280.679" timestamp="1607670999587" />
-    <state x="277" y="102" width="839" height="476" key="new project wizard" timestamp="1607671067803">
+    <state x="277" y="102" width="839" height="492" key="new project wizard" timestamp="1607675120044">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state x="277" y="102" width="839" height="476" key="new project wizard/0.0.1280.679@0.0.1280.679" timestamp="1607671067803" />
+    <state x="277" y="102" width="839" height="492" key="new project wizard/0.0.1280.679@0.0.1280.679" timestamp="1607675120044" />
     <state x="303" y="0" width="672" height="678" key="search.everywhere.popup" timestamp="1607658984248">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="303" y="0" width="672" height="678" key="search.everywhere.popup/0.0.1280.679@0.0.1280.679" timestamp="1607658984248" />
-    <state x="321" y="2" key="spring file set editor" timestamp="1607671465029">
+    <state x="321" y="2" key="spring file set editor" timestamp="1607676614348">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state x="321" y="2" key="spring file set editor/0.0.1280.679@0.0.1280.679" timestamp="1607671465029" />
+    <state x="321" y="2" key="spring file set editor/0.0.1280.679@0.0.1280.679" timestamp="1607676614348" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -275,5 +263,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/spring_study$MyTest_TestDI1.ic" NAME="MyTest.TestDI1 Coverage Results" MODIFIED="1607676443381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

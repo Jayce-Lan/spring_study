@@ -369,13 +369,33 @@ User user = (User) context.getBean("userBean");
 
 
 
-## 依赖注入
+## 依赖注入（DI）
 
 
 
 ### 构造器注入
 
-参考IOC创建对象的方式
+```xml
+<!--构造器注入
+        constructor-arg 使用标签注入类的属性
+            type 用于指定要注入的数据类型，与构造函数中的属性相对应(但是当出现多个同类型的属性时，无法实现注入)
+            index 用于指定要注入的数据为指定构造函数的索引位置
+            name 用于指定构造函数指定名称的属性赋值
+
+            value 引用字符串
+            ref 引用关联的bean对象（在容器中配置过的对象）
+    -->
+    <bean id="accountService" class="com.learn.Service.impl.AccountServiceImpl">
+        <constructor-arg name="name" value="泰斯特"/>
+        <constructor-arg name="age" value="18"/>
+        <constructor-arg name="birthday" ref="now"/>
+    </bean>
+
+    <!--配置日期对象-->
+    <bean id="now" class="java.util.Date"/>
+```
+
+> 缺点：必须提供相应参数的构造方法 
 
 
 
