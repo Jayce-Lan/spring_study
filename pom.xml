@@ -10,6 +10,7 @@
     <modules>
         <module>day01-01-jdbc</module>
         <module>day01-02-factory</module>
+        <module>day01-03spring-bean</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -28,10 +29,11 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.14</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.12.RELEASE</version>
         </dependency>
     </dependencies>
 </project>

@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="day01-01-jdbc" />
         <module name="day01-02-factory" />
+        <module name="day01-03spring-bean" />
+        <module name="day01-01-jdbc" />
       </profile>
     </annotationProcessing>
   </component>
