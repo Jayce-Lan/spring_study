@@ -7,10 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day01-02-factory" />
-        <module name="day01-03spring-bean" />
-        <module name="day01-05spring-DI" />
-        <module name="day01-04spring-bean" />
         <module name="day01-01-jdbc" />
+        <module name="day01-04spring-bean" />
+        <module name="day01-03spring-bean" />
+        <module name="day02-01spring-anno_ioc" />
+        <module name="day01-05spring-DI" />
       </profile>
     </annotationProcessing>
   </component>

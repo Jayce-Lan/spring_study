@@ -13,6 +13,7 @@
         <module>day01-03spring-bean</module>
         <module>day01-04spring-bean</module>
         <module>day01-05spring-DI</module>
+        <module>day02-01spring-anno_ioc</module>
     </modules>
     <packaging>pom</packaging>
 
