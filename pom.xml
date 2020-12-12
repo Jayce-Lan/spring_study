@@ -14,6 +14,7 @@
         <module>day01-04spring-bean</module>
         <module>day01-05spring-DI</module>
         <module>day02-01spring-anno_ioc</module>
+        <module>day02-02spring-account_xml_ioc</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -37,11 +38,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.2.12.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.14</version>
         </dependency>
     </dependencies>
 </project>

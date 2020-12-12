@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置持久层对象-->
+    <bean id="accountMapper" class="com.learn.dao.impl.AccountMapperImpl">
+        <property name="runner" ref="runner"/>
+    </bean>
+
+    <!--配置业务层对象-->
+    <bean id="accountService" class="com.learn.service.impl.AccountServiceImpl">
+        <!--注入dao对象-->
+        <property name="accountMapper" ref="accountMapper"/>
+    </bean>
+
+    <!--配置QueryRunner对象
+        scope="prototype"：保证线程之间不互相干扰
+    -->
+    <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
+        <!--注入数据源：由于是单表单个数据库操作，因此可以直接在这里注入数据源-->
+        <constructor-arg name="ds" ref="dataSource"/>
+    </bean>
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--注入连接数据库的必备信息-->
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost/spring?useSSL=false&amp;serverTimezone=UTC"/>
+        <property name="user" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+</beans>

@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e23b96-ee2e-48fe-a433-9fe67260ac94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day02-01spring-anno_ioc/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02-01spring-anno_ioc/src/main/java/com/learn/dao/AccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02-01spring-anno_ioc/src/main/java/com/learn/dao/impl/AccountMapperImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02-01spring-anno_ioc/src/main/java/com/learn/dao/impl/AccountMapperImpl2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02-01spring-anno_ioc/src/main/java/com/learn/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02-01spring-anno_ioc/src/main/java/com/learn/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02-01spring-anno_ioc/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day02-01spring-anno_ioc/src/test/java/MyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02-02spring-account_xml_ioc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02-02spring-account_xml_ioc/src/main/java/com/learn/dao/AccountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02-02spring-account_xml_ioc/src/main/java/com/learn/dao/impl/AccountMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02-02spring-account_xml_ioc/src/main/java/com/learn/pojo/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02-02spring-account_xml_ioc/src/main/java/com/learn/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02-02spring-account_xml_ioc/src/main/java/com/learn/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02-02spring-account_xml_ioc/src/main/resources/bean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day02-02spring-account_xml_ioc/src/test/java/MyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +60,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/day01-04spring-bean/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/day02-02spring-account_xml_ioc/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,56 +74,58 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaProject\spring_study\day02-02spring-account_xml_ioc\src\main\resources" />
       <recent name="D:\JavaProject\spring_study\day01-04spring-bean\src\main\resources" />
       <recent name="D:\JavaProject\spring_study\day01-04spring-bean\src\main\java" />
       <recent name="D:\JavaProject\spring_study\day01-01-jdbc\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.testUI">
-    <configuration name="MyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day01-05spring-DI" />
+  <component name="RunManager" selected="JUnit.MyTest.deleteAccount">
+    <configuration name="MyTest.deleteAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day02-02spring-account_xml_ioc" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyTest.TestDI1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day01-05spring-DI" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="TestDI1" />
+      <option name="METHOD_NAME" value="deleteAccount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.TestDI2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day01-05spring-DI" />
+    <configuration name="MyTest.getAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day02-02spring-account_xml_ioc" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="TestDI2" />
+      <option name="METHOD_NAME" value="getAccount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.testUI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day02-01spring-anno_ioc" />
+    <configuration name="MyTest.getList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day02-02spring-account_xml_ioc" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="testUI" />
+      <option name="METHOD_NAME" value="getList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.testUI1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="day02-01spring-anno_ioc" />
+    <configuration name="MyTest.saveAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day02-02spring-account_xml_ioc" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
-      <option name="METHOD_NAME" value="testUI1" />
+      <option name="METHOD_NAME" value="saveAccount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyTest.updateAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="day02-02spring-account_xml_ioc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyTest" />
+      <option name="METHOD_NAME" value="updateAccount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -131,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyTest.testUI" />
-        <item itemvalue="JUnit.MyTest.testUI1" />
-        <item itemvalue="JUnit.MyTest.TestDI2" />
-        <item itemvalue="JUnit.MyTest" />
-        <item itemvalue="JUnit.MyTest.TestDI1" />
+        <item itemvalue="JUnit.MyTest.deleteAccount" />
+        <item itemvalue="JUnit.MyTest.updateAccount" />
+        <item itemvalue="JUnit.MyTest.getList" />
+        <item itemvalue="JUnit.MyTest.getAccount" />
+        <item itemvalue="JUnit.MyTest.saveAccount" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +154,7 @@
       <workItem from="1607650341972" duration="5058000" />
       <workItem from="1607655435977" duration="4251000" />
       <workItem from="1607670978027" duration="6866000" />
-      <workItem from="1607758599933" duration="5115000" />
+      <workItem from="1607758599933" duration="9017000" />
     </task>
     <servers />
   </component>
@@ -167,10 +169,10 @@
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="233" y="0" key="#Project_Structure/0.0.1280.679@0.0.1280.679" timestamp="1607671117047" />
-    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser" timestamp="1607761727001">
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser" timestamp="1607765258544">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state x="446" y="55" key="#com.intellij.ide.util.MemberChooser/0.0.1280.679@0.0.1280.679" timestamp="1607761727001" />
+    <state x="446" y="47" key="#com.intellij.ide.util.MemberChooser/0.0.1280.679@0.0.1280.679" timestamp="1607765258544" />
     <state x="282" y="264" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1607671135401">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
@@ -187,38 +189,38 @@
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="421" y="94" key="FileChooserDialogImpl/0.0.1280.679@0.0.1280.679" timestamp="1607651635309" />
-    <state width="1237" height="287" key="GridCell.Tab.0.bottom" timestamp="1607763821909">
+    <state width="1237" height="292" key="GridCell.Tab.0.bottom" timestamp="1607767690784">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="287" key="GridCell.Tab.0.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607763821909" />
-    <state width="1237" height="287" key="GridCell.Tab.0.center" timestamp="1607763821909">
+    <state width="1237" height="292" key="GridCell.Tab.0.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607767690784" />
+    <state width="1237" height="292" key="GridCell.Tab.0.center" timestamp="1607767690784">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="287" key="GridCell.Tab.0.center/0.0.1280.679@0.0.1280.679" timestamp="1607763821909" />
-    <state width="1237" height="287" key="GridCell.Tab.0.left" timestamp="1607763821909">
+    <state width="1237" height="292" key="GridCell.Tab.0.center/0.0.1280.679@0.0.1280.679" timestamp="1607767690784" />
+    <state width="1237" height="292" key="GridCell.Tab.0.left" timestamp="1607767690784">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="287" key="GridCell.Tab.0.left/0.0.1280.679@0.0.1280.679" timestamp="1607763821909" />
-    <state width="1237" height="287" key="GridCell.Tab.0.right" timestamp="1607763821909">
+    <state width="1237" height="292" key="GridCell.Tab.0.left/0.0.1280.679@0.0.1280.679" timestamp="1607767690784" />
+    <state width="1237" height="292" key="GridCell.Tab.0.right" timestamp="1607767690784">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="287" key="GridCell.Tab.0.right/0.0.1280.679@0.0.1280.679" timestamp="1607763821909" />
-    <state width="1237" height="287" key="GridCell.Tab.1.bottom" timestamp="1607763821910">
+    <state width="1237" height="292" key="GridCell.Tab.0.right/0.0.1280.679@0.0.1280.679" timestamp="1607767690784" />
+    <state width="1237" height="292" key="GridCell.Tab.1.bottom" timestamp="1607767690785">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="287" key="GridCell.Tab.1.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607763821910" />
-    <state width="1237" height="287" key="GridCell.Tab.1.center" timestamp="1607763821910">
+    <state width="1237" height="292" key="GridCell.Tab.1.bottom/0.0.1280.679@0.0.1280.679" timestamp="1607767690785" />
+    <state width="1237" height="292" key="GridCell.Tab.1.center" timestamp="1607767690785">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="287" key="GridCell.Tab.1.center/0.0.1280.679@0.0.1280.679" timestamp="1607763821910" />
-    <state width="1237" height="287" key="GridCell.Tab.1.left" timestamp="1607763821909">
+    <state width="1237" height="292" key="GridCell.Tab.1.center/0.0.1280.679@0.0.1280.679" timestamp="1607767690785" />
+    <state width="1237" height="292" key="GridCell.Tab.1.left" timestamp="1607767690785">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="287" key="GridCell.Tab.1.left/0.0.1280.679@0.0.1280.679" timestamp="1607763821909" />
-    <state width="1237" height="287" key="GridCell.Tab.1.right" timestamp="1607763821910">
+    <state width="1237" height="292" key="GridCell.Tab.1.left/0.0.1280.679@0.0.1280.679" timestamp="1607767690785" />
+    <state width="1237" height="292" key="GridCell.Tab.1.right" timestamp="1607767690785">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state width="1237" height="287" key="GridCell.Tab.1.right/0.0.1280.679@0.0.1280.679" timestamp="1607763821910" />
+    <state width="1237" height="292" key="GridCell.Tab.1.right/0.0.1280.679@0.0.1280.679" timestamp="1607767690785" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1607651264020">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
@@ -231,18 +233,18 @@
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="325" y="163" key="com.intellij.ide.util.TipDialog/0.0.1280.679@0.0.1280.679" timestamp="1607758599984" />
-    <state x="277" y="102" width="839" height="492" key="new project wizard" timestamp="1607758868373">
+    <state x="277" y="102" width="839" height="492" key="new project wizard" timestamp="1607764083338">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state x="277" y="102" width="839" height="492" key="new project wizard/0.0.1280.679@0.0.1280.679" timestamp="1607758868373" />
+    <state x="277" y="102" width="839" height="492" key="new project wizard/0.0.1280.679@0.0.1280.679" timestamp="1607764083338" />
     <state x="303" y="0" width="672" height="678" key="search.everywhere.popup" timestamp="1607762607761">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
     <state x="303" y="0" width="672" height="678" key="search.everywhere.popup/0.0.1280.679@0.0.1280.679" timestamp="1607762607761" />
-    <state x="321" y="2" key="spring file set editor" timestamp="1607759036218">
+    <state x="321" y="2" key="spring file set editor" timestamp="1607766184173">
       <screen x="0" y="0" width="1280" height="679" />
     </state>
-    <state x="321" y="2" key="spring file set editor/0.0.1280.679@0.0.1280.679" timestamp="1607759036218" />
+    <state x="321" y="2" key="spring file set editor/0.0.1280.679@0.0.1280.679" timestamp="1607766184173" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
