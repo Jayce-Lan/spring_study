@@ -13,6 +13,7 @@
         <module name="day02-02spring-account_xml_ioc" />
         <module name="day01-03spring-bean" />
         <module name="day02-01spring-anno_ioc" />
+        <module name="day02-04spring-account_anno_ioc_notxml" />
         <module name="day01-05spring-DI" />
       </profile>
     </annotationProcessing>
