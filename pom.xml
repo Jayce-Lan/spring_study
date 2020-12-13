@@ -15,6 +15,7 @@
         <module>day01-05spring-DI</module>
         <module>day02-01spring-anno_ioc</module>
         <module>day02-02spring-account_xml_ioc</module>
+        <module>day02-03spring-account_anno_ioc</module>
     </modules>
     <packaging>pom</packaging>
 
