@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day01-02-factory" />
+        <module name="day03-04spring-adviceType" />
         <module name="day01-01-jdbc" />
         <module name="day03-01account" />
         <module name="day01-04spring-bean" />

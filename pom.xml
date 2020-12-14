@@ -20,6 +20,7 @@
         <module>day03-01account</module>
         <module>day03-02proxy</module>
         <module>day03-03spring-aop</module>
+        <module>day03-04spring-adviceType</module>
     </modules>
     <packaging>pom</packaging>
 
