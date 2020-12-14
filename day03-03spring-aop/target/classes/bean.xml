@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--配置ioc，把service对象配置进入文件中-->
+    <bean id="accountService" class="com.learn.service.impl.AccountServiceImpl"/>
+
+    <!--aop配置
+            1.将通知类bean交由spring管理
+            2.使用aop:config标签声明开始的配置
+            3.aop:aspect配置切面
+                id：给切面的唯一标识
+                ref：指定通知类bean的id
+            4.配置aop:aspect的内部通知
+                aop:before 前置通知
+                pointcut切入点
+                execution(修饰符 返回值 全类名.方法名)
+                    execution(public void com.learn.service.impl.AccountServiceImpl.saveAccount())
+                    全通配写法
+                        execution(* *..*.*(..))
+                    实际开发中，通常都是切到业务层类下的所有方法
+                        * com.learn.service.impl.*.*(..)
+
+    -->
+    <bean id="logger" class="com.learn.utils.Logger"/>
+    <aop:config>
+        <aop:aspect id="logAdvice" ref="logger">
+            <aop:before method="printLog"
+                        pointcut="execution(* com.learn.service.impl.*.*(..))"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>

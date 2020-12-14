@@ -7,16 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="day01-02-factory" />
-        <module name="day01-04spring-bean" />
-        <module name="day02-03spring-account_anno_ioc" />
-        <module name="day03-02proxy" />
         <module name="day01-01-jdbc" />
         <module name="day03-01account" />
-        <module name="day02-02spring-account_xml_ioc" />
+        <module name="day01-04spring-bean" />
+        <module name="day03-03spring-aop" />
         <module name="day01-03spring-bean" />
         <module name="day02-01spring-anno_ioc" />
+        <module name="day03-02proxy" />
+        <module name="day02-02spring-account_xml_ioc" />
         <module name="day02-04spring-account_anno_ioc_notxml" />
         <module name="day01-05spring-DI" />
+        <module name="day02-03spring-account_anno_ioc" />
       </profile>
     </annotationProcessing>
   </component>

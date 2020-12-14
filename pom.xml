@@ -19,6 +19,7 @@
         <module>day02-04spring-account_anno_ioc_notxml</module>
         <module>day03-01account</module>
         <module>day03-02proxy</module>
+        <module>day03-03spring-aop</module>
     </modules>
     <packaging>pom</packaging>
 
