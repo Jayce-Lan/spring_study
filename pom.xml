@@ -25,6 +25,7 @@
         <module>day04-01JdbcTemplate</module>
         <module>day04-02acount-aop_tx</module>
         <module>day04-03tx</module>
+        <module>day04-04tx_anno</module>
     </modules>
     <packaging>pom</packaging>
 
