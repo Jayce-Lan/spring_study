@@ -23,6 +23,8 @@
         <module>day03-04spring-adviceType</module>
         <module>day03-05spring-annotation_aop</module>
         <module>day04-01JdbcTemplate</module>
+        <module>day04-02acount-aop_tx</module>
+        <module>day04-03tx</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -17,9 +17,11 @@
         <module name="day01-01-jdbc" />
         <module name="day02-04spring-account_anno_ioc_notxml" />
         <module name="day01-04spring-bean" />
+        <module name="day04-02acount-aop_tx" />
         <module name="day03-04spring-adviceType" />
         <module name="day01-02-factory" />
         <module name="day01-03spring-bean" />
+        <module name="day04-03tx" />
         <module name="day01-05spring-DI" />
       </profile>
     </annotationProcessing>

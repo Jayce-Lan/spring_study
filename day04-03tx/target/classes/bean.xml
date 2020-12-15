@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--配置数据-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/spring?useSSL=false&amp;serverTimezone=UTC"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+    <bean id="accountMapper" class="com.learn.dao.impl.AccountMapperImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="accountService" class="com.learn.service.impl.AccountServiceImpl">
+        <property name="accountMapper" ref="accountMapper"/>
+    </bean>
+
+
+    <!--配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--配置事务的通知-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <!--配置事务的属性-->
+        <!--
+            事务的属性
+                isolation="" 指定事务的隔离级别
+                propagation="" 指定事务的传播行为，默认为 REQUIRED，增删改可以使用 SUPPORTS
+                read-only="" 指定事务是否只读，默认为false，一般查询才会使用
+                rollback-for="" 用于指定一个异常，当产生异常时，事务回滚，产生其它异常时，事务不回滚，没有默认值时，表示任何异常都回滚
+                no-rollback-for="" 与上相反，没有默认值时任何异常都回滚
+                timeout="" 用于指定事务的超时时间，-1代表永不超时，以秒为单位
+        -->
+        <tx:attributes>
+            <tx:method name="*" read-only="false" propagation="REQUIRED"/>
+            <tx:method name="get*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+    <!--配置切入点-->
+    <aop:config>
+        <aop:pointcut id="pt1" expression="execution(* com.learn.service.impl.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pt1"/>
+    </aop:config>
+</beans>
