@@ -9,22 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>day03-04spring-adviceType</artifactId>
+    <artifactId>day03-05spring-annotation_aop</artifactId>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.6</version>
+            <version>1.9.5</version>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.6</version>
-            <scope>compile</scope>
         </dependency>
 
     </dependencies>
-
 </project>

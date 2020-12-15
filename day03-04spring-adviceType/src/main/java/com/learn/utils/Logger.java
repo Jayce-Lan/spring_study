@@ -1,6 +1,7 @@
 package com.learn.utils;
 
-import org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint;
+
+import org.aspectj.lang.ProceedingJoinPoint;
 
 //用于记录日志的工具类，提供了公共方法
 public class Logger {
@@ -26,23 +27,23 @@ public class Logger {
         System.out.println("最终通知");
     }
 
-    public Object surround(ProceedingJoinPoint pjp) {
-        Object rtValue = null;
+    public Object surround(ProceedingJoinPoint joinPoint) {
+        Object object = null;
         try {
-            Object[] args = pjp.getArgs();  //获取方法所需参数
+            Object[] args = joinPoint.getArgs();    //得到方法运行时的参数
 
-            System.out.println("前置通知");
+            System.out.println("方法执行前通知。。。");
 
-            rtValue = pjp.proceed(args);  //调用业务层方法
+            object = joinPoint.proceed(args);    //明确业务层方法（切入点方法）的调用
 
-            System.out.println("后置通知");
+            System.out.println("方法执行后通知。。。");
 
-            return rtValue;
+            return object;
         } catch (Throwable throwable) {
-            System.out.println("错误通知");
+            System.out.println("方法执行异常通知。。。");
             throw new RuntimeException(throwable);
         } finally {
-            System.out.println("最终通知");
+            System.out.println("最终通知。。。");
         }
     }
 }

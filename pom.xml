@@ -21,6 +21,7 @@
         <module>day03-02proxy</module>
         <module>day03-03spring-aop</module>
         <module>day03-04spring-adviceType</module>
+        <module>day03-05spring-annotation_aop</module>
     </modules>
     <packaging>pom</packaging>
 
