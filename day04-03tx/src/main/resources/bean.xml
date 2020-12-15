@@ -31,6 +31,7 @@
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
     <!--配置事务的通知-->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <!--配置事务的属性-->
@@ -49,6 +50,7 @@
             <tx:method name="get*" read-only="true"/>
         </tx:attributes>
     </tx:advice>
+
     <!--配置切入点-->
     <aop:config>
         <aop:pointcut id="pt1" expression="execution(* com.learn.service.impl.*.*(..))"/>

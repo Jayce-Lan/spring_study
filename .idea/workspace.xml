@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e23b96-ee2e-48fe-a433-9fe67260ac94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/main/java/com/learn/dao/AccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/main/java/com/learn/dao/impl/AccountMapperImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/main/java/com/learn/pojo/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/main/java/com/learn/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/main/java/com/learn/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/main/java/com/learn/utils/ConnectionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/main/java/com/learn/utils/TransactionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-02acount-aop_tx/src/test/java/MyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/day04-03tx.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/src/main/java/com/learn/dao/AccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/src/main/java/com/learn/dao/impl/AccountMapperImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/src/main/java/com/learn/pojo/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/src/main/java/com/learn/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/src/main/java/com/learn/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day04-03tx/src/test/java/MyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04-03tx/src/main/resources/bean.xml" beforeDir="false" afterPath="$PROJECT_DIR$/day04-03tx/src/main/resources/bean.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +152,7 @@
       <workItem from="1607915552761" duration="4738000" />
       <workItem from="1607935194331" duration="7077000" />
       <workItem from="1607992578340" duration="3735000" />
-      <workItem from="1608012070075" duration="11991000" />
+      <workItem from="1608012070075" duration="12326000" />
     </task>
     <servers />
   </component>
