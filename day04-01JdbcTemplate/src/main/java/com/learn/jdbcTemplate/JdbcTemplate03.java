@@ -18,7 +18,8 @@ public class JdbcTemplate03 {
         JdbcTemplate jdbcTemplate = (JdbcTemplate) context.getBean("jdbcTemplate");
 
 //        getAccountList(jdbcTemplate);
-        getCount(jdbcTemplate);
+//        getCount(jdbcTemplate);
+        getAccountById(jdbcTemplate, 2);
     }
 
     //添加用户
@@ -61,7 +62,7 @@ public class JdbcTemplate03 {
         List<Account> account = jdbcTemplate.query(sql,
                 new BeanPropertyRowMapper<Account>(Account.class), id);
 
-        System.out.println(account.isEmpty() ? "无查询结果" : account);
+        System.out.println(account.isEmpty() ? "无查询结果" : account.get(0));
     }
 
     //返回一行一列
