@@ -1697,83 +1697,99 @@ public class MyTest {
 
 
 
-## 整合MyBatis
+## 对数据库的封装(JDBCTemplate)
 
-> 步骤
 
-- 导入相关jar包
-  - junit
-  - mybatis
-  - mysql
-  - spring
-  - aop织入
-  - mybatis-spring
 
-- 编写配置文件
-- 测试
+### JdbcTemplate
 
-> pom.xml
+#### maven依赖
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>5.2.12.RELEASE</version>
+</dependency>
+<!--事务依赖-->
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-tx</artifactId>
+    <version>5.2.12.RELEASE</version>
+</dependency>
+```
+
+
+
+#### 使用方法
+
+```java
+import ...
+
+/**
+ * JdbcTemplate基本用法
+ */
+public class JdbcTemplateDemo01 {
+    public static void main(String[] args) {
+        //准备数据源：spring内置数据源
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost/spring?useSSL=false&serverTimezone=UTC");
+        dataSource.setUsername("root");
+        dataSource.setPassword("root");
+        //创建对象
+        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+        //设置数据源
+        jdbcTemplate.setDataSource(dataSource);
+        //执行操作
+        String sql = "insert into account (name, money) values ('李华', 90000)";
+        jdbcTemplate.execute(sql);
+    }
+}
+```
+
+
+
+由于数据源中的数据都是由set方法注入的，因此可以在IOC容器中进行注入
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>spring_study</artifactId>
-        <groupId>org.example</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <artifactId>spring-10-mybatis</artifactId>
+    <!--配置JdbcTemplate-->
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.21</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.5.2</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>5.2.11.RELEASE</version>
-        </dependency>
-        <!--spring操作数据库的依赖包-->
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>5.2.1.RELEASE</version>
-        </dependency>
-        <!--aop依赖-->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.8.13</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>2.0.1</version>
-        </dependency>
+    <!--配置数据-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/spring?useSSL=false&amp;serverTimezone=UTC"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
 
-    </dependencies>
-
-</project>
+</beans>
 ```
 
+> 实现类
+
+```java
+import ...
+
+//使用IOC装配jdbctemplate
+public class JdbcTemplate02 {
+    public static void main(String[] args) {
+        //获取容器
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+        JdbcTemplate jdbcTemplate = (JdbcTemplate) context.getBean("jdbcTemplate");
+        String sql = "";
+        jdbcTemplate.execute(sql);
+    }
+}
+```
