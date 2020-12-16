@@ -26,6 +26,7 @@
         <module>day04-02acount-aop_tx</module>
         <module>day04-03tx</module>
         <module>day04-04tx_anno</module>
+        <module>day04-05-tx-anno_noxml</module>
     </modules>
     <packaging>pom</packaging>
 
